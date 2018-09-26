@@ -1,43 +1,46 @@
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="/" style="font-size:32px">ASAP</a>
-                </div>
-                <ul class="nav navbar-nav">
-                    <li><a href="/">Home</a></li>
-                    <li class="active"><a href="/staff">Doctor</a></li>
-                    <li><a href="/exchange"> Staff Exchange</a></li>
-                    <li><a href="/medicine">Medicine Hub</a></li>
-                    <li class="active"><a href="/record">Record Keeping</a></li>
-                    <li><a href="/AmbulanceGo">AmbulanceGo</a></li>
-                    <li><a href="/complain">Feedback</a></li>
-                    <li><a href="/review">Reviews</a></li>
-                </ul>
-            </div>
-        </nav>
 
-        <div style="text-align:center;margin-top:50px">
-          <form onsubmit="/recordview.html">
-            <label>Patient ID</label><br>
-            <input type="text" required>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/" style="font-size:32px">ASAP</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li class="active"><a href="/staff">Doctor</a></li>
+                <li><a href="/exchange"> Staff Exchange</a></li>
+                <li><a href="/medicine">Medicine Hub</a></li>
+                <li class="active"><a href="/record">Record Keeping</a></li>
+                <li><a href="/AmbulanceGo">AmbulanceGo</a></li>
+                <li><a href="/complain">Feedback</a></li>
+                <li><a href="/review">Reviews</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div style="text-align:center;margin-top:50px">
+        <form action="/reportdownload" method="post" enctype="multipart/form-data">
+            <label for="patientid">Patient ID</label><br>
+            <input type="text" required name="patientid">
             <br>
             <br>
             <br>
-            <label>OTP</label><br>
-            <input type="text" required>
+            <label for="billno">Bill NO</label><br>
+            <input type="text" required name="billno">
             <br>
             <br>
             <button type="submit">Submit</button>
-        </div>
-      </body>
-      </html>
+    </div>
+</body>
+
+</html>

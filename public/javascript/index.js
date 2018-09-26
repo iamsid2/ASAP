@@ -6,7 +6,8 @@ $(document).ready(function(){
         var password = $("#pass").val();
         console.log(password);
         if(username === "abinash" && password === "labadmin"){
-            location.href = "./fileupload";}
+            location.href = "./reportupload";}
+        else{alert("wrong userId or password");}
     });
     $("#regform").submit(function(e){
         e.preventDefault();
