@@ -10,13 +10,13 @@
         <%if(type == "success"){%>
         <h3>New person,</h3>
         <b>Patient ID:</b>
-        <% patient.patientid %>
+        <% patient.body.patientid %>
         <p> with </p>
         <b>Bill No:</b>
-        <% patient.billno %>
+        <% patient.body.billno %>
         <p>,</p>
         <b>Report</b>
-        <% patient.filetoupload %>
+        <% patient.file.filename %>
         <p>added!</p>
         <%}%>
     </div>

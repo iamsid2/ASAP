@@ -8,6 +8,6 @@ var reportSchema = new Schema({
     report: String
 });
 
-var Person = mongoose.model('person', reportSchema);
+var Report = mongoose.model('report', reportSchema);
 
-module.exports = Person;
+module.exports = Report;

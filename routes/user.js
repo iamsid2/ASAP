@@ -5,7 +5,7 @@ var path = require('path');
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 mongoose.connect('mongodb://localhost/report');
-var Person = require('../models/report');
+var Report = require('../models/report');
 var upload = require('../multer/storage');
 var Feedback = require('../models/feedback');
 
@@ -15,42 +15,29 @@ router.get('/login', function (req, res) {
 router.get('/reportupload', function (req, res) {
   res.render('pages/reportupload');
 });
-router.post('/reportupload', function (req, res) {
-  console.log("hii");
-  upload(req, res, function (err) {
-    console.log(req.body.patientid);
-    console.log(req.body.billno);
-    if (req.filetoupload == null || req.filetoupload == undefined || req.filetoupload == "") {
-      console.log(req.filetoupload);
-      res.render('pages/status', {
-        message: "Sorry, you provided worng info", type: "error"
+router.post('/reportupload', upload.single('report'), function (req, res, err) {
+  if (!req.body.patientid || !req.body.billno || req.file == null || req.file == undefined || req.file == "") {
+    console.log(req.file);
+    res.send("Sorry, you provided wrong info");
+  } else {
+      console.log("a");
+      var patientInfo = req.body;
+      var newReport = new Report({
+        patientid: req.body.patientid,
+        billno: req.body.billno,
+        report: req.file.filename
       });
-    } else {
-      console.log("b");
-      if (err) { console.log(err); }
-      else {
-        console.log(req.body);
-        console.log(req.file)
-        var newPerson = new Person({
-          patientid: req.body.patientid,
-          billno: req.body.billno,
-          report: req.file.filename
-        });
-        newPerson.save(function (err, Person) {
-          if (err)
-            res.render('pages/status', { message: "Database error", type: "error" });
-          else
-            res.render('pages/status', {
-              message: "New person added", type: "success", patient: patientInfo
-            });
-        });
-      }
-    }
-  })
+      newReport.save(function (err, Person) {
+        if (err)
+          res.send("Database error");
+        else
+          res.send("New report added");
+      });
+  }
 })
 
 router.get('/status', function (req, res) {
-  res.render('pages/status')
+  res.render('status')
 })
 
 router.get('/AmbulanceGo', function (req, res) {
@@ -73,7 +60,7 @@ router.get('/record', function (req, res) {
   res.render('record')
 })
 
-router.post('/recorddownload', function (req, res) {
+router.post('/recorddownload', upload.single('report'), function (req, res) {
   var reportInfo = req.body;
   console.log(req.body);
   if (!reportInfo.patientid || !reportInfo.billno) {
@@ -81,7 +68,7 @@ router.post('/recorddownload', function (req, res) {
       message: "Sorry, you provided worng info", type: "error"
     });
   } else {
-    Person.find({ patientid: reportInfo.patientid, billno: reportInfo.billno },
+    Report.find({ patientid: reportInfo.patientid, billno: reportInfo.billno },
       function (err, response) {
         console.log(response);
         if (err)
@@ -110,11 +97,12 @@ router.post('/feedback', function (req, res) {
       feedback: req.body.feedback
     });
     console.log(newFeedback);
-    newFeedback.save(function (err, Person) {
+    newFeedback.save(function (err, Feedback) {
       if (err)
         res.send(err);
       else
-        res.send("Thank you for your feedback");
+        console.log(Feedback);
+      res.send("Thank you for your feedback");
     });
   }
 })
