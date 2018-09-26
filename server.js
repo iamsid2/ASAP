@@ -27,6 +27,14 @@ var userRoutes = require('./routes/user');
 app.use(mainRoutes);
 app.use(userRoutes);
 
+mongoose.connect('mongodb://localhost:27017/report ');
+var db = mongoose.connection;
+db.once('open', function () {
+  console.log("Connection to MongoDB succesful...");
+}).on('error', function (error) {
+  console.log("MongoDB connection error: ", error);
+});
+
 app.listen(8080, function () {
     console.log("Server is running at 8080");
 });
