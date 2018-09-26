@@ -17,30 +17,29 @@
             </div>
             <ul class="nav navbar-nav">
                 <li><a href="/">Home</a></li>
-                <li class="active"><a href="/staff">Doctor</a></li>
+                <li><a href="/staff">Doctor</a></li>
                 <li><a href="/exchange"> Staff Exchange</a></li>
                 <li><a href="/medicine">Medicine Hub</a></li>
-                <li class="active"><a href="/record">Record Keeping</a></li>
+                <li><a href="/record">Record Keeping</a></li>
                 <li><a href="/AmbulanceGo">AmbulanceGo</a></li>
-                <li><a href="/feedback">Feedback</a></li>
+                <li class="active"><a href="/feedback">Feedback</a></li>
                 <li><a href="/review">Reviews</a></li>
             </ul>
         </div>
     </nav>
-
-    <div style="text-align:center;margin-top:50px">
-        <form action="/reportdownload" method="post" enctype="multipart/form-data">
-            <label for="patientid">Patient ID</label><br>
-            <input type="text" required name="patientid">
-            <br>
-            <br>
-            <br>
-            <label for="billno">Bill NO</label><br>
-            <input type="text" required name="billno">
-            <br>
-            <br>
-            <button type="submit">Submit</button>
+    <div style="text-align:center;">
+        <h1>Public Health Center Complain Filing Portal</h1>
+        <form action="/feedback" method="post">
+            <label for="bedno">Bed No:</label><br><br>
+            <input type="text" id="bed" name="bedno"><br><br>
+            <label for="feedback">Type Your Feedback Below:</label><br><br>
+            <textarea class="cmp" id="complain" name="feedback"></textarea>
+            <br><br>
+            <input type="submit">
+        </form>
     </div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+    <script type="text/javascript" src="index.js"></script>
 </body>
 
 </html>

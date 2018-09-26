@@ -5,8 +5,9 @@ var path = require('path');
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 mongoose.connect('mongodb://localhost/report');
-var reportModel = require('../models/report');
-var upload = require('../multer/storage')
+var Person = require('../models/report');
+var upload = require('../multer/storage');
+var Feedback = require('../models/feedback');
 
 router.get('/login', function (req, res) {
   res.render('pages/login');
@@ -21,7 +22,7 @@ router.post('/reportupload', function (req, res) {
     console.log(req.body.billno);
     if (req.filetoupload == null || req.filetoupload == undefined || req.filetoupload == "") {
       console.log(req.filetoupload);
-      res.render('pages/status',{
+      res.render('pages/status', {
         message: "Sorry, you provided worng info", type: "error"
       });
     } else {
@@ -47,21 +48,7 @@ router.post('/reportupload', function (req, res) {
     }
   })
 })
-//     var form = new formidable.IncomingForm();
-//     form.parse(req, function (err, fields, files) {
-//         console.log(patientid);
-//         console.log(billno);
-//         var oldpath = files.filetoupload.path;
-//         var newpath = '/home/abinash/Downloads/' + files.filetoupload.name;
-//         console.log(oldpath);
-//         console.log(newpath);
-//         fs.rename(oldpath, newpath, function (err) {
-//             if (err) throw err;
-//             res.send('File uploaded and moved!');
-//             // res.end();
-//         });
-//     });
-// })
+
 router.get('/status', function (req, res) {
   res.render('pages/status')
 })
@@ -110,8 +97,26 @@ router.post('/recorddownload', function (req, res) {
 router.get('/recordview', function (req, res) {
   res.render('recordview')
 })
-router.get('/complain', function (req, res) {
-  res.render('complain')
+router.get('/feedback', function (req, res) {
+  res.render('feedback')
+})
+
+router.post('/feedback', function (req, res) {
+  if (!req.body.bedno || !req.body.feedback)
+    res.send("sorry you provided wrong info");
+  else {
+    var newFeedback = new Feedback({
+      bedno: req.body.bedno,
+      feedback: req.body.feedback
+    });
+    console.log(newFeedback);
+    newFeedback.save(function (err, Person) {
+      if (err)
+        res.send(err);
+      else
+        res.send("Thank you for your feedback");
+    });
+  }
 })
 
 router.get('/review', function (req, res) {

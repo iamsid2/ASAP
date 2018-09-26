@@ -28,7 +28,7 @@ var userRoutes = require('./routes/user');
 app.use(mainRoutes);
 app.use(userRoutes);
 
-mongoose.connect('mongodb://localhost:27017/report ');
+mongoose.connect('mongodb://localhost:27017 ');
 var db = mongoose.connection;
 db.once('open', function () {
   console.log("Connection to MongoDB succesful...");
