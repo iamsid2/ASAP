@@ -5,7 +5,7 @@ mongoose.connect('mongodb://localhost/report');
 var reportSchema = new Schema({
     patientid: String,
     billno: String,
-    report: Object
+    report: String
 });
 
 var Person = mongoose.model('person', reportSchema);

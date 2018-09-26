@@ -6,6 +6,7 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 mongoose.connect('mongodb://localhost/report');
 var reportModel = require('../models/report');
+var upload = require('../multer/storage')
 
 router.get('/login', function (req, res) {
   res.render('pages/login');
@@ -14,35 +15,37 @@ router.get('/reportupload', function (req, res) {
   res.render('pages/reportupload');
 });
 router.post('/reportupload', function (req, res) {
-  var patientInfo = reportModel(); //Get the parsed information
-  console.log(req.body);
-  if (!patientInfo.patientid || !patientInfo.billno || !patientInfo.filetoupload) {
-    res.render('pages/status', {
-      message: "Sorry, you provided worng info", type: "error"
-    });
-  } else {
-    console.log('hello');
-    var form = new formidable.IncomingForm();
-    form.parse(patientInfo, function (err, fields, files) {
-      console.log(patientInfo.patientid);
-      console.log(patientInfo.billno);
-      console.log(files.filetoupload.name);
-      var newPerson = new Person({
-        name: patientInfo.patientid,
-        age: patientInfo.billno,
-        nationality: files.filetoupload.name
+  console.log("hii");
+  upload(req, res, function (err) {
+    console.log(req.body.patientid);
+    console.log(req.body.billno);
+    if (req.filetoupload == null || req.filetoupload == undefined || req.filetoupload == "") {
+      console.log(req.filetoupload);
+      res.render('pages/status',{
+        message: "Sorry, you provided worng info", type: "error"
       });
-    });
-
-    newPerson.save(function (err, Person) {
-      if (err)
-        res.render('pages/status', { message: "Database error", type: "error" });
-      else
-        res.render('pages/status', {
-          message: "New person added", type: "success", patient: patientInfo
+    } else {
+      console.log("b");
+      if (err) { console.log(err); }
+      else {
+        console.log(req.body);
+        console.log(req.file)
+        var newPerson = new Person({
+          patientid: req.body.patientid,
+          billno: req.body.billno,
+          report: req.file.filename
         });
-    });
-  }
+        newPerson.save(function (err, Person) {
+          if (err)
+            res.render('pages/status', { message: "Database error", type: "error" });
+          else
+            res.render('pages/status', {
+              message: "New person added", type: "success", patient: patientInfo
+            });
+        });
+      }
+    }
+  })
 })
 //     var form = new formidable.IncomingForm();
 //     form.parse(req, function (err, fields, files) {
@@ -104,7 +107,7 @@ router.post('/recorddownload', function (req, res) {
   }
 })
 
-router.get('/recordview',function(req, res){
+router.get('/recordview', function (req, res) {
   res.render('recordview')
 })
 router.get('/complain', function (req, res) {

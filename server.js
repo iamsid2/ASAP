@@ -10,6 +10,7 @@ var formidable = require('formidable');
 var fs = require('fs');
 var app = express();
 var path = require('path');
+var multer = require('multer');
 
 //Middleware
 app.use(express.static(__dirname + '/public'));
@@ -38,3 +39,4 @@ db.once('open', function () {
 app.listen(8080, function () {
     console.log("Server is running at 8080");
 });
+
