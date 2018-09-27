@@ -68,7 +68,7 @@ router.post('/recorddownload', upload.single('report'), function (req, res) {
       message: "Sorry, you provided worng info", type: "error"
     });
   } else {
-    Report.find({ patientid: reportInfo.patientid, billno: reportInfo.billno },
+    Report.findOne({ patientid: reportInfo.patientid, billno: reportInfo.billno },
       function (err, response) {
         console.log(response);
         if (err)
@@ -110,5 +110,6 @@ router.post('/feedback', function (req, res) {
 router.get('/review', function (req, res) {
   res.render('review')
 })
+
 
 module.exports = router;

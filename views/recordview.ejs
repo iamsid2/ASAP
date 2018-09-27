@@ -39,11 +39,12 @@
         <%if(type == "success" && report.length != 0){%>
         <h3>New report,</h3>
         <b>Patient ID:</b>
-        <% report.patientid %>
+        <%= report.patientid %>
         <p> with </p>
         <b>Bill No:</b>
-        <% report.billno %>
+        <%= report.billno %>
         <p>and</p>
-        <button><a href="<% report.report %>"> Download</a></button>
+        <b>DOWNLOAD REPORT HERE!!</b>
+        <button><a href="/uploads/<%= report.report %>"> Download</a></button>
         <%}%>
     </ul>

@@ -4,7 +4,7 @@ var path = require('path');
 //for multer storage and uploads
 var storage	=	multer.diskStorage({
     destination: function (req, file, callback) {
-      callback(null, '/home/abinash/Documents/project/Pune-Hackathon/uploads');
+      callback(null, 'public/uploads');
     },
     filename: function (req, file, callback) {
       callback(null, file.fieldname + '-' + Date.now()  + path.extname(file.originalname));
