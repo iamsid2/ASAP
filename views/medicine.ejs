@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
     <style>
         table,
         th,
@@ -19,6 +19,15 @@
         table {
             border-spacing: 30px;
         }
+        #myMedicine {
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            width: 100%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+}
     </style>
 </head>
 
@@ -42,14 +51,15 @@
         </div>
     </nav>
 
+    <div>
+        <input type="text" id="myMedicine" onkeyup="medFilter()" placeholder="Search for medicines..." title="Type in a medicine">
+    </div>
     <h1>MEDICINES HUB</h1>
-    <table name='medicine' style="width:100%">
+    <table id="medicineTable" name='medicine' style="width:100%">
         <tr>
             <th>Medicine Name:</th>
             <th>Units Left:</th>
             <th>Expiry Date:</th>
-            <!-- <th>Assigned to Prescription Numbers:</th>
-      <th>EDIT</th> -->
         </tr>
         <% for(var i=0; i<articles.length; i++)  { %>
         <tr>
@@ -62,8 +72,6 @@
             <td>
                 <%= articles[i].expiry%>
             </td>
-            <!-- <td><%= articles[i].precno%></td>
-        <td><a href="/article/edit/<%=articles[i]._id%>">EDIT</a></td> -->
         </tr>
         <% } %>
     </table>
@@ -75,6 +83,7 @@
             <button style="font-size: .4em;" type="submit">Go to Login</button>
         </form>
     </div>
+    <script src="javascript/index1.js" type="text/javascript"></script>
 </body>
 
 </html>

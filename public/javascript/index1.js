@@ -1,24 +1,19 @@
-$(document).ready(function(){
-    accept = function(){
-        var bedno = document.getElementById("bed").value;
-        var complain_sub = document.getElementById("complain").value;
-        console.log(bedno);
-        console.log(complain_sub);
-        clean();
-    }
-    clean = function(){
-        document.getElementById("bed").value="";
-        document.getElementById("complain").value="";
-    }
-    accept1 = function(){
-        var phc= document.getElementById("PHC").value;
-        var doctor= document.getElementById("Doctor").value;
-        console.log(phc);
-        console.log(doctor);
-        clean1();
-    }
-    clean1 = function(){
-        document.getElementById("PHC").value="";
-        document.getElementById("Doctor").value="";
+$(document).ready(function () {
+    medFilter = function () {
+        var input, filter, table, tr, td, i;
+        input = document.getElementById("myMedicine");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("medicineTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
     }
 });
