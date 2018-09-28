@@ -1,6 +1,4 @@
-<!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,33 +21,14 @@
 </head>
 
 <body>
-
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="/" style="font-size:32px">ASAP</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li><a href="/">Home</a></li>
-                <li><a href="/staff">Doctor</a></li>
-                <li><a href="/exchange"> Staff Exchange</a></li>
-                <li class="active"><a href="/medicine">Medicine Hub</a></li>
-                <li><a href="/record">Record Keeping</a></li>
-                <li><a href="/AmbulanceGo">AmbulanceGo</a></li>
-                <li><a href="/feedback">Feedback</a></li>
-                <li><a href="/review">Reviews</a></li>
-            </ul>
-        </div>
-    </nav>
-
     <h1>MEDICINES HUB</h1>
     <table name='medicine' style="width:100%">
         <tr>
             <th>Medicine Name:</th>
             <th>Units Left:</th>
             <th>Expiry Date:</th>
-            <!-- <th>Assigned to Prescription Numbers:</th>
-      <th>EDIT</th> -->
+            <th>Assigned to Prescription Numbers:</th>
+            <th>EDIT</th>
         </tr>
         <% for(var i=0; i<articles.length; i++)  { %>
         <tr>
@@ -62,11 +41,14 @@
             <td>
                 <%= articles[i].expiry%>
             </td>
-            <!-- <td><%= articles[i].precno%></td>
-        <td><a href="/article/edit/<%=articles[i]._id%>">EDIT</a></td> -->
+            <td>
+                <%= articles[i].precno%>
+            </td>
+            <td><a href="/article/edit/<%=articles[i]._id%>">EDIT</a></td>
         </tr>
         <% } %>
     </table>
+    <button><a href="/add">ADD MEDICINE</a></button>
 
 </body>
 

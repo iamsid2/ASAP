@@ -7,6 +7,9 @@ $(document).ready(function(){
         console.log(password);
         if(username === "abinash" && password === "labadmin"){
             location.href = "./reportupload";}
+        else if(username === "anwesha" && password === "medadmin"){
+            location.href = "/medadmin";
+        }
         else{alert("wrong userId or password");}
     });
     $("#regform").submit(function(e){

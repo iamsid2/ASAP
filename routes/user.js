@@ -21,19 +21,19 @@ router.post('/reportupload', upload.single('report'), function (req, res, err) {
     console.log(req.file);
     res.send("Sorry, you provided wrong info");
   } else {
-      console.log("a");
-      var patientInfo = req.body;
-      var newReport = new Report({
-        patientid: req.body.patientid,
-        billno: req.body.billno,
-        report: req.file.filename
-      });
-      newReport.save(function (err, Person) {
-        if (err)
-          res.send("Database error");
-        else
-          res.send("New report added");
-      });
+    console.log("a");
+    var patientInfo = req.body;
+    var newReport = new Report({
+      patientid: req.body.patientid,
+      billno: req.body.billno,
+      report: req.file.filename
+    });
+    newReport.save(function (err, Person) {
+      if (err)
+        res.send("Database error");
+      else
+        res.send("New report added");
+    });
   }
 })
 
@@ -110,9 +110,9 @@ router.get('/review', function (req, res) {
 })
 
 //home route
-router.get('/medicine',function(req, res){
-  Article.find({}, function(err,articles){
-    if(err){
+router.get('/medicine', function (req, res) {
+  Article.find({}, function (err, articles) {
+    if (err) {
       console.log(err);
     } else {
       res.render('medicine', {
@@ -123,119 +123,120 @@ router.get('/medicine',function(req, res){
 });
 
 //add route
-router.get('/add', function(req, res){
+router.get('/add', function (req, res) {
   res.render('add_article');
 });
 
 //ADD SUBMIT POST
-router.post('/articles/add', function(req, res){
-  let article= new Article();
+router.post('/articles/add', function (req, res) {
+  let article = new Article();
   article.title = req.body.title;
   article.stock = req.body.stock;
   article.expiry = req.body.expiry;
   article.precno = req.body.precno;
 
-article.save(function(err){
-  if(err){
-    console.log(err);
-    return;
-  } else{
-    res.redirect('/medicine');
-  }
-});
-});//home route
-router.get('/',function(req, res){
-  Article.find({}, function(err,articles){
-    if(err){
+  article.save(function (err) {
+    if (err) {
       console.log(err);
+      return;
     } else {
-      res.render('index', {
-        articles: articles
-      });
+      res.redirect('/medadmin');
     }
   });
 });
 
 //add route
-router.get('/add', function(req, res){
+router.get('/add', function (req, res) {
   res.render('add_article');
 });
 
 //ADD SUBMIT POST
-router.post('/articles/add', function(req, res){
-  let article= new Article();
+router.post('/articles/add', function (req, res) {
+  let article = new Article();
   article.title = req.body.title;
   article.stock = req.body.stock;
   article.expiry = req.body.expiry;
   article.precno = req.body.precno;
 
-article.save(function(err){
-  if(err){
-    console.log(err);
-    return;
-  } else{
-    res.redirect('/');
-  }
-});
+  article.save(function (err) {
+    if (err) {
+      console.log(err);
+      return;
+    } else {
+      res.redirect('/');
+    }
+  });
 });
 
 //LOAD EDIT FORM
-router.get('/article/edit/:id', function(req, res){
-  Article.findById(req.params.id,function(err, article){
-    res.render('edit_article',{
+router.get('/article/edit/:id', function (req, res) {
+  Article.findById(req.params.id, function (err, article) {
+    res.render('edit_article', {
       article: article
     });
   });
 });
 
 //update SUBMIT POST
-router.post('/articles/edit/:id', function(req, res){
-  let article= {};
+router.post('/articles/edit/:id', function (req, res) {
+  let article = {};
   article.title = req.body.title;
   article.stock = req.body.stock;
   article.expiry = req.body.expiry;
   article.precno = req.body.precno;
 
-  let query={_id:req.params.id}
-Article.updateOne(query, article, function(err){
-  if(err){
-    console.log(err);
-    return;
-  } else{
-    res.redirect('/');
-  }
- });
+  let query = { _id: req.params.id }
+  Article.updateOne(query, article, function (err) {
+    if (err) {
+      console.log(err);
+      return;
+    } else {
+      res.redirect('/medadmin');
+    }
+  });
 
 });
 
 
 //LOAD EDIT FORM
-router.get('/article/edit/:id', function(req, res){
-  Article.findById(req.params.id,function(err, article){
-    res.render('edit_article',{
+router.get('/article/edit/:id', function (req, res) {
+  Article.findById(req.params.id, function (err, article) {
+    res.render('edit_article', {
       article: article
     });
   });
 });
 
 //update SUBMIT POST
-router.post('/articles/edit/:id', function(req, res){
-  let article= {};
+router.post('/articles/edit/:id', function (req, res) {
+  let article = {};
   article.title = req.body.title;
   article.stock = req.body.stock;
   article.expiry = req.body.expiry;
   article.precno = req.body.precno;
 
-  let query={_id:req.params.id}
-Article.updateOne(query, article, function(err){
-  if(err){
-    console.log(err);
-    return;
-  } else{
-    res.redirect('/medicine');
-  }
- });
+  let query = { _id: req.params.id }
+  Article.updateOne(query, article, function (err) {
+    if (err) {
+      console.log(err);
+      return;
+    } else {
+      res.redirect('/medicine');
+    }
+  });
 
+});
+
+router.get('/medadmin', function (req, res) {
+  Article.find({}, function (err, articles) {
+    if (err) {
+      console.log(err);
+    } else {
+      res.render('medadmin', {
+        articles: articles
+      });
+    }
+  });
 });
 
 
