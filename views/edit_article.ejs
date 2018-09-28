@@ -1,0 +1,19 @@
+<html>
+<head>
+
+</head>
+<body>
+  <h1>EDIT MEDICINE</h1>
+    <form method='POST' action='/articles/edit/<%= article._id%>'>
+      <label for='title'>TITLE:</label>
+      <input name='title' type='text' value='<%= article.title%>'><br>
+      <label for='stock'>STOCK:</label>
+      <input name='stock' type='text' value=<%= article.stock%>><br>
+      <label for='expiry'>EXPIRY DATE:</label>
+      <input name='expiry' type='text' value=<%= article.expiry%>><br>
+      <label for='precno'>PRESCRIPTION NO:</label>
+      <input name='precno' type='text' value=<%= article.precno%>><br>
+      <input type='submit' value='SUBMIT'>
+    </form>
+</body>
+</html>

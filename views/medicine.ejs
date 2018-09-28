@@ -37,24 +37,25 @@ table {
       </div>
   </nav>
 
-<table style="width:100%">
-  <tr>
-    <th><b>Medicine Name</b></th>
-    <th><b>Count</b></th>
-  </tr>
-  <tr>
-    <td>O2</td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>Paracetamol</td>
-    <td>94</td>
-  </tr>
-  <tr>
-    <td>Quinine</td>
-    <td>80</td>
-  </tr>
-</table>
+  <h1>MEDICINES HUB</h1>
+  <table name='medicine' style="width:100%">
+    <tr>
+      <th>Medicine Name:</th>
+      <th>Units Left:</th>
+      <th>Expiry Date:</th>
+      <!-- <th>Assigned to Prescription Numbers:</th>
+      <th>EDIT</th> -->
+    </tr>
+    <% for(var i=0; i<articles.length; i++)  { %>
+      <tr>
+        <td><%= articles[i].title%></td>
+        <td><%= articles[i].stock%></td>
+        <td><%= articles[i].expiry%></td>
+        <!-- <td><%= articles[i].precno%></td>
+        <td><a href="/article/edit/<%=articles[i]._id%>">EDIT</a></td> -->
+      </tr>
+      <% } %>
+    </table>
 
 </body>
 </html>

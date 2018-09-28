@@ -8,6 +8,7 @@ mongoose.connect('mongodb://localhost/report');
 var Report = require('../models/report');
 var upload = require('../multer/storage');
 var Feedback = require('../models/feedback');
+var Article = require('../models/article');
 
 router.get('/login', function (req, res) {
   res.render('pages/login');
@@ -52,9 +53,6 @@ router.get('/exchange', function (req, res) {
   res.render('exchange')
 })
 
-router.get('/medicine', function (req, res) {
-  res.render('medicine')
-})
 
 router.get('/record', function (req, res) {
   res.render('record')
@@ -110,6 +108,136 @@ router.post('/feedback', function (req, res) {
 router.get('/review', function (req, res) {
   res.render('review')
 })
+
+//home route
+router.get('/medicine',function(req, res){
+  Article.find({}, function(err,articles){
+    if(err){
+      console.log(err);
+    } else {
+      res.render('medicine', {
+        articles: articles
+      });
+    }
+  });
+});
+
+//add route
+router.get('/add', function(req, res){
+  res.render('add_article');
+});
+
+//ADD SUBMIT POST
+router.post('/articles/add', function(req, res){
+  let article= new Article();
+  article.title = req.body.title;
+  article.stock = req.body.stock;
+  article.expiry = req.body.expiry;
+  article.precno = req.body.precno;
+
+article.save(function(err){
+  if(err){
+    console.log(err);
+    return;
+  } else{
+    res.redirect('/medicine');
+  }
+});
+});//home route
+router.get('/',function(req, res){
+  Article.find({}, function(err,articles){
+    if(err){
+      console.log(err);
+    } else {
+      res.render('index', {
+        articles: articles
+      });
+    }
+  });
+});
+
+//add route
+router.get('/add', function(req, res){
+  res.render('add_article');
+});
+
+//ADD SUBMIT POST
+router.post('/articles/add', function(req, res){
+  let article= new Article();
+  article.title = req.body.title;
+  article.stock = req.body.stock;
+  article.expiry = req.body.expiry;
+  article.precno = req.body.precno;
+
+article.save(function(err){
+  if(err){
+    console.log(err);
+    return;
+  } else{
+    res.redirect('/');
+  }
+});
+});
+
+//LOAD EDIT FORM
+router.get('/article/edit/:id', function(req, res){
+  Article.findById(req.params.id,function(err, article){
+    res.render('edit_article',{
+      article: article
+    });
+  });
+});
+
+//update SUBMIT POST
+router.post('/articles/edit/:id', function(req, res){
+  let article= {};
+  article.title = req.body.title;
+  article.stock = req.body.stock;
+  article.expiry = req.body.expiry;
+  article.precno = req.body.precno;
+
+  let query={_id:req.params.id}
+Article.updateOne(query, article, function(err){
+  if(err){
+    console.log(err);
+    return;
+  } else{
+    res.redirect('/');
+  }
+ });
+
+});
+
+
+//LOAD EDIT FORM
+router.get('/article/edit/:id', function(req, res){
+  Article.findById(req.params.id,function(err, article){
+    res.render('edit_article',{
+      article: article
+    });
+  });
+});
+
+//update SUBMIT POST
+router.post('/articles/edit/:id', function(req, res){
+  let article= {};
+  article.title = req.body.title;
+  article.stock = req.body.stock;
+  article.expiry = req.body.expiry;
+  article.precno = req.body.precno;
+
+  let query={_id:req.params.id}
+Article.updateOne(query, article, function(err){
+  if(err){
+    console.log(err);
+    return;
+  } else{
+    res.redirect('/medicine');
+  }
+ });
+
+});
+
 
 
 module.exports = router;
