@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Visualize Patient Data</title>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.26.0/mapbox-gl.css' rel='stylesheet' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Register Login Widget template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login Signup Responsive web template, SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <!-- Custom Theme files -->
+    <!--web-fonts-->
+    <link href='//fonts.googleapis.com/css?family=Jura:400,300,500,600' rel='stylesheet' type='text/css'>
+    <!-- favicons
+      ================================================== -->
+    <link rel="shortcut icon" href="ASAP.ico" type="image/x-icon">
+    <link rel="icon" href="ASAP.ico" type="image/x-icon">
+    <style>
+        .navbar{
+          overflow: hidden;
+          background-color: #333 !important;
+          top: 0; /* Position the navbar at the top of the page */
+          width: 100%; /* Full width */
+      	box-shadow: 3px 3px 8px hsl(0, 0%, 80%);
+      }
+      .navbar a:hover{
+      color: green !important;
+      font-size: 1.5em;
+      }
+
+      </style>
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="ASAP.ico" type="image/x-icon">
+    <link rel="icon" href="ASAP.ico" type="image/x-icon">
+</head>
+
+<body>
+    <nav style="position: absolute" class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/" style="font-size:32px">ASAP</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/staff">Doctor</a></li>
+                <li class="active"><a href="/exchange"> Staff Exchange</a></li>
+                <li><a href="/medicine">Medicine Hub</a></li>
+                <li><a href="/record">Issue Record</a></li>
+                <li><a href="/AmbulanceGo">AmbulanceGo</a></li>
+                <li><a href="/feedback">Feedback</a></li>
+                <li><a href="/review">Reviews</a></li>
+            </ul>
+            </ul>
+        </div>
+    </nav>
+    <div id='map' style='width: 800px; height: 500px;'></div>
+</body>
+
+<script src="/socket.io/socket.io.js"></script>
+
+<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+
+<script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.26.0/mapbox-gl.js"></script>
+
+<script type="text/javascript">
+    var socket = io();
+
+    //Empty variables to store information. This will get filled later
+    var map, marker;
+    mapboxgl.accessToken = 'pk.eyJ1IjoiaWFtc2lkMiIsImEiOiJjam1pemRrc3gwOW1jM3dxcWwyMXhubmx1In0.D-nlBUTjIfBj6E4NusKkqA';
+
+    //First send a GET request using JQuery AJAX and get the cop's details and save it
+    $.ajax({
+        url: '/requests/info',
+        type: 'GET',
+        dataType: 'json',
+        success: function (data) {
+            console.log(data);
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/dark-v9',
+                center: [77.64115449999997, 12.9718915],
+                zoom: 10
+            });
+
+
+            map.on('load', function () {
+
+                // Add a new source from our GeoJSON data and set the
+                // 'cluster' option to true.
+                map.addSource("help-requests", {
+                    type: "geojson",
+                    data: data
+                });
+
+                //we can specify different color and styling formats by adding different layers
+
+                map.addLayer({
+                    "id": "help-requests",
+                    "type": "circle",
+                    "source": "help-requests",
+                    "paint": {
+                        //Apply a  different color to different status fields
+                        'circle-color': {
+                            property: 'status',
+                            type: 'categorical',
+                            stops: [
+                                //For waiting, show in red
+                                ['waiting', 'rgba(255,0,0,0.5)'],
+                                //For engaged, show in green
+                                ['engaged', 'rgba(0,255,0,0.5)']
+                            ]
+                        },
+                        "circle-radius": 20, //Radius of the circle
+                        "circle-blur": 1 //Amount of blur
+                    }
+                });
+            });
+
+        },
+        error: function (httpRequest, status, error) {
+            console.log(error);
+        }
+    });
+</script>
+
+</html>

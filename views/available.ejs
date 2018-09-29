@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style1.css">
+    <style>
+        table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="ASAP.ico" type="image/x-icon">
+    <link rel="icon" href="ASAP.ico" type="image/x-icon">
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/" style="font-size:32px">ASAP</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/staff">Doctor</a></li>
+                <li class="active"><a href="/exchange"> Staff Exchange</a></li>
+                <li><a href="/medicine">Medicine Hub</a></li>
+                <li><a href="/record">Issue Record</a></li>
+                <li><a href="/AmbulanceGo">AmbulanceGo</a></li>
+                <li><a href="/feedback">Feedback</a></li>
+                <li><a href="/review">Reviews</a></li>
+            </ul>
+            </ul>
+        </div>
+    </nav>
+
+
+    <h3 style="text-align:center;color: black;font-size: 3em;"> Availibility of Staff </h3>
+    <div style="padding:20px;color: black; ">
+        <table style="background: grey;border:black 2x solid; box-shadow: 5px 10px black; box-sizing: border-box;padding: 10px; margin: 5px;">
+            <tr>
+                <th>S.No</th>
+                <th>PHC NAME</th>
+                <th>ADDRESS</th>
+                <th>STAFF AVAILABLE QUANTITY</th>
+                <th>DEPARTMENT</th>
+                <th>CONTACT</th>
+            </tr>
+            <% for(var i=0; i<Availables.length; i++) {%>
+            <tr>
+                <th>
+                    <%= i+1 %>
+                </th>
+                <th>
+                    <%= Availables[i].name %>
+                </th>
+                <th>
+                    <%= Availables[i].address %>
+                </th>
+                <th>
+                    <%= Availables[i].staffavail %>
+                </th>
+                <th>
+                    <%= Availables[i].department %>
+                </th>
+                <th>
+                    <%= Availables[i].contact %>
+                </th>
+
+            </tr>
+            <% } %>
+
+        </table>
+    </div>
+    <br>
+    <div style="text-align:center;color: black;font-size: 3em;">
+        <h3 style="text-align:center;color: black;font-size: 1em;">Add Requirements</h3>
+        <form action="/loginstaff" method="GET">
+            <h3 style="text-align:center;color: black;font-size: .5em;">Click the button for login <span style="color:gold">Only
+                    for Administartors use</span> </h3>
+            <button type="submit">Go to Login</button>
+        </form>
+    </div>
+</body>
+
+</html>
