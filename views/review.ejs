@@ -1,35 +1,36 @@
-
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="/css/style.css">
-        <link rel="stylesheet" type="text/css" href="/css/star.css">
-        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-    </head>
-    <body>
-      <nav class="navbar navbar-default">
-          <div class="container-fluid">
-              <div class="navbar-header">
-                  <a class="navbar-brand" href="/" style="font-size:32px">ASAP</a>
-              </div>
-              <ul class="nav navbar-nav">
-                  <li><a href="/">Home</a></li>
-                  <li><a href="/staff">Doctor</a></li>
-                  <li><a href="/exchange"> Staff Exchange</a></li>
-                  <li><a href="/medicine">Medicine Hub</a></li>
-                  <li><a href="/record">Record Keeping</a></li>
-                  <li><a href="/AmbulanceGo">AmbulanceGo</a></li>
-                  <li><a href="/feedback">Feedback</a></li>
-                  <li class="active"><a href="/review">Reviews</a></li>
-              </ul>
-          </div>
-      </nav>
-        <div>
-          <form action="/review" method="post">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/star.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/" style="font-size:32px">ASAP</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/staff">Doctor</a></li>
+                <li><a href="/exchange"> Staff Exchange</a></li>
+                <li><a href="/medicine">Medicine Hub</a></li>
+                <li><a href="/record">Record Keeping</a></li>
+                <li><a href="/AmbulanceGo">AmbulanceGo</a></li>
+                <li><a href="/feedback">Feedback</a></li>
+                <li class="active"><a href="/review">Reviews</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div>
+        <form action="/review" method="post">
             <h2>PHC Name:</h2>
             <input type="text" id="PHC" name="phc">
             <h2>Dr.Name</h2>
@@ -38,51 +39,59 @@
                 <h2>Review:</h2>
                 <div class="stars">
                     <h2>Sanitations</h2>
-                        <input class="star star-5" id="star-5" type="radio" name="star"/>
+                    <form>
+                        <input class="star star-5" id="star-5" type="radio" name="star" />
                         <label class="star star-5" for="star-5" title="Amazing"></label>
-                        <input class="star star-4" id="star-4" type="radio" name="star"/>
+                        <input class="star star-4" id="star-4" type="radio" name="star" />
                         <label class="star star-4" for="star-4" title="Very good"></label>
-                        <input class="star star-3" id="star-3" type="radio" name="star"/>
+                        <input class="star star-3" id="star-3" type="radio" name="star" />
                         <label class="star star-3" for="star-3" title="Good"></label>
-                        <input class="star star-2" id="star-2" type="radio" name="star"/>
+                        <input class="star star-2" id="star-2" type="radio" name="star" />
                         <label class="star star-2" for="star-2" title="Average"></label>
-                        <input class="star star-1" id="star-1" type="radio" name="star"/>
+                        <input class="star star-1" id="star-1" type="radio" name="star" />
                         <label class="star star-1" for="star-1" title="Terrible"></label>
+                    </form>
                 </div>
                 <div class="stars1">
                     <h2>Treatment</h2>
-                        <input class="star1 star-10" id="star-10" type="radio" name="star"/>
+                    <form>
+                        <input class="star1 star-10" id="star-10" type="radio" name="star" />
                         <label class="star1 star-10" for="star-10" title="Amazing"></label>
-                        <input class="star1 star-9" id="star-9" type="radio" name="star"/>
+                        <input class="star1 star-9" id="star-9" type="radio" name="star" />
                         <label class="star1 star-9" for="star-9" title="Very good"></label>
-                        <input class="star1 star-8" id="star-8" type="radio" name="star"/>
+                        <input class="star1 star-8" id="star-8" type="radio" name="star" />
                         <label class="star1 star-8" for="star-8" title="Good"></label>
-                        <input class="star1 star-7" id="star-7" type="radio" name="star"/>
+                        <input class="star1 star-7" id="star-7" type="radio" name="star" />
                         <label class="star1 star-7" for="star-7" title="Average"></label>
-                        <input class="star1 star-6" id="star-6" type="radio" name="star"/>
-                        <label class="star1 star-6" for="star-6" title=￼"Terrible"></label>
+                        <input class="star1 star-6" id="star-6" type="radio" name="star" />
+                        <label class="star1 star-7" for="star-7" title="Terrible"></label>
+                    </form>
                 </div>
                 <div class="stars2">
-                              <input class="star1 star-7" id="star-7" type="radio" name="star"/>
-                        <input class="star1 star-7" id="star-7" type="radio" name="star"/>
-              <h2>Overall</h2>
-                        <input class="star2 star-15" id="star-15" type="radio" name="star"/>
+                    <form>
+                        <h2>Overall</h2>
+                        <input class="star2 star-15" id="star-15" type="radio" name="star" />
                         <label class="star2 star-15" for="star-15" title="Amazing"></label>
-                        <input class="star2 star-14" id="star-14" type="radio" name="star"/>
+                        <input class="star2 star-14" id="star-14" type="radio" name="star" />
                         <label class="star2 star-14" for="star-14" title="Very good"></label>
-                        <input class="star2 star-13" id="star-13" type="radio" name="star"/>
+                        <input class="star2 star-13" id="star-13" type="radio" name="star" />
                         <label class="star2 star-13" for="star-13" title="Good"></label>
-                        <input class="star2 star-12" id="star-12" type="radio" name="star"/>
+                        <input class="star2 star-12" id="star-12" type="radio" name="star" />
                         <label class="star2 star-12" for="star-12" title="Average"></label>
-                        <input class="star2 star-11" id="star-11" type="radio" name="star"/>
+                        <input class="star2 star-11" id="star-11" type="radio" name="star" />
                         <label class="star2 star-11" for="star-11" title="Terrible"></label>
+                    </form>
                 </div>￼
             </div>
             <br><br><br>
             <button>Submit</button>
-          </form>
-        </div>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
-        <script type="text/javascript" src="index.js"></script>
-    </body>
+        </form>
+    </div>
+    <br><br><br>
+    <button onclick="accept1()">Submit</button>
+    </div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+    <script type="text/javascript" src="/javascipts/index1.js"></script>
+</body>
+
 </html>

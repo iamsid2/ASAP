@@ -45,7 +45,7 @@ h5,
 h6 {
 	clear: both;
   font-family: 'Patua One', serif;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 h1{
   font-size: 2em;
@@ -53,7 +53,7 @@ h1{
 }
 
 h2 {
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
   color: #007489;
 }
 
@@ -228,7 +228,7 @@ font-size: 1.2em;
     float: left;
     color: #ffffff;
     width: 100px;
-    line-height: 100px;
+    /* line-height: 100px; */
     margin: 2px;
     display: none;
 }

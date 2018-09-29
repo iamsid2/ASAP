@@ -1,3 +1,4 @@
+/* for stars1 to star5 */
 div.stars {
     width: 270px;
     }
@@ -24,6 +25,8 @@ label.star:before {
     content: '\f006';
     font-family: FontAwesome;
     }
+
+/* for stars6 to star10 */
 div.stars1 {
     width: 270px;
       }
@@ -50,6 +53,8 @@ label.star1:before {
     content: '\f006';
     font-family: FontAwesome;
       }
+
+/* for star11 to star15 */
 div.stars2 {
     width: 270px;
             }
