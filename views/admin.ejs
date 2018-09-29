@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style1.css">
+    <style>
+        table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+  }
+
+  td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+  }
+
+  tr:nth-child(even) {
+      background-color: #dddddd;
+  }
+  ::placeholder{
+    text-align: center;
+  }
+  .container{
+    background: azure;
+    padding: 10px;
+    border: black 2px solid;
+    box-shadow: 5px 10px black;
+  }
+
+  </style>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="ASAP.ico" type="image/x-icon">
+    <link rel="icon" href="ASAP.ico" type="image/x-icon">
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/" style="font-size:32px">ASAP</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/staff">Doctor</a></li>
+                <li class="active"><a href="/exchange"> Staff Exchange</a></li>
+                <li><a href="/medicine">Medicine Hub</a></li>
+                <li><a href="/record">Issue Record</a></li>
+                <li><a href="/AmbulanceGo">AmbulanceGo</a></li>
+                <li><a href="/feedback">Feedback</a></li>
+                <li><a href="/review">Reviews</a></li>
+            </ul>
+            </ul>
+        </div>
+    </nav>
+    <div style="float:right">
+        <form action="/logout" method="GET"><button type="submit">Logout</button></form>
+    </div>
+    <div>
+        <h3 style="color:black; font-size:3em;text-align:center">Add Requirements</h3>
+        <br>
+        <div class="container">
+            <div class="inner" style="padding:20px;">
+                <form action="/req" method="POST">
+                    <div class="form-group">
+                        <label>PHC NAME</label>
+                        <input type="text" placeholder="name" name="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Address</label><br>
+                        <input type="text" placeholder="address" name="address" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Staff Required</label><br>
+                        <input type="text" placeholder="staff_required" name="staffreq" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Department</label><br>
+                        <input type="text" placeholder="department" name="department" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Contact</label><br>
+                        <input type="text" placeholder="contact" name="contact" class="form-control" required>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-default" style="color:white;background-color: green;">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div>
+        <h3 style="text-align: center;color: black;font-size: 3em;">Add Availibility</h3>
+        <br>
+        <div class="container">
+            <div class="inner" style="padding:20px;">
+                <form action="/avail" method="POST">
+                    <div class="form-group">
+                        <label>PHC NAME</label><br>
+                        <input type="text" placeholder="name" name="name" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Address</label><br>
+                        <input type="text" placeholder="address" name="address" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Staff Available</label><br>
+                        <input type="text" placeholder="staff_available" name="staffavail" class="form-control"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Department</label><br>
+                        <input type="text" placeholder="department" name="department" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Contact</label><br>
+                        <input type="text" placeholder="contact" name="contact" class="form-control" required>
+                    </div>
+                    <br>
+
+                    <div style="text-align:centre">
+                        <button type="submit" class="btn btn-default" style="color:white;background-color: green;">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</html>
