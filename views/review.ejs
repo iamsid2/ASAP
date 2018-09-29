@@ -16,12 +16,12 @@
     <!-- Custom Theme files -->
     <!--web-fonts-->
     <link href='//fonts.googleapis.com/css?family=Jura:400,300,500,600' rel='stylesheet' type='text/css'>
-      <!-- favicons
+    <!-- favicons
       ================================================== -->
-      <link rel="shortcut icon" href="ASAP.ico" type="image/x-icon">
-      <link rel="icon" href="ASAP.ico" type="image/x-icon">
-      <style>
-      .navbar{
+    <link rel="shortcut icon" href="ASAP.ico" type="image/x-icon">
+    <link rel="icon" href="ASAP.ico" type="image/x-icon">
+    <style>
+        .navbar{
           overflow: hidden;
           background-color: #333 !important;
           top: 0; /* Position the navbar at the top of the page */
@@ -47,7 +47,7 @@
                 <li><a href="/staff">Doctor</a></li>
                 <li><a href="/exchange"> Staff Exchange</a></li>
                 <li><a href="/medicine">Medicine Hub</a></li>
-                <li><a href="/record">Record Keeping</a></li>
+                <li><a href="/record">Issue Record</a></li>
                 <li><a href="/AmbulanceGo">AmbulanceGo</a></li>
                 <li><a href="/feedback">Feedback</a></li>
                 <li class="active"><a href="/review">Reviews</a></li>
@@ -56,70 +56,23 @@
     </nav>
     <div>
         <form action="/review" method="post">
-            <h2>PHC Name:</h2>
-            <input type="text" id="PHC" name="phc">
-            <h2>Dr.Name</h2>
-            <input type="text" id="Doctor" name="doctor">￼￼￼
-            <div>
-                <h2>Review:</h2>
-                <div class="stars">
-                    <h2>Sanitations</h2>
-                    <form action="">
-                        <input class="star star-5" id="star-5" type="radio" name="star" />
-                        <label class="star star-5" for="star-5" title="Amazing"></label>
-                        <input class="star star-4" id="star-4" type="radio" name="star" />
-                        <label class="star star-4" for="star-4" title="Very good"></label>
-                        <input class="star star-3" id="star-3" type="radio" name="star" />
-                        <label class="star star-3" for="star-3" title="Good"></label>
-                        <input class="star star-2" id="star-2" type="radio" name="star" />
-                        <label class="star star-2" for="star-2" title="Average"></label>
-                        <input class="star star-1" id="star-1" type="radio" name="star" />
-                        <label class="star star-1" for="star-1" title="Terrible"></label>
-                    </form>
-                </div>
-                <div class="stars1">
-                    <h2>Treatment</h2>
-                    <form action="">
-                        <input class="star1 star-10" id="star-10" type="radio" name="star" />
-                        <label class="star1 star-10" for="star-10" title="Amazing"></label>
-                        <input class="star1 star-9" id="star-9" type="radio" name="star" />
-                        <label class="star1 star-9" for="star-9" title="Very good"></label>
-                        <input class="star1 star-8" id="star-8" type="radio" name="star" />
-                        <label class="star1 star-8" for="star-8" title="Good"></label>
-                        <input class="star1 star-7" id="star-7" type="radio" name="star" />
-                        <label class="star1 star-7" for="star-7" title="Average"></label>
-                        <input class="star1 star-6" id="star-6" type="radio" name="star" />
-                        <label class="star1 star-7" for="star-7" title="Terrible"></label>
-                    </form>
-                </div>
-                <div class="stars2">
-                    <form action="">
-                        <h2>Overall</h2>
-                        <input class="star2 star-15" id="star-15" type="radio" name="star" />
-                        <label class="star2 star-15" for="star-15" title="Amazing"></label>
-                        <input class="star2 star-14" id="star-14" type="radio" name="star" />
-                        <label class="star2 star-14" for="star-14" title="Very good"></label>
-                        <input class="star2 star-13" id="star-13" type="radio" name="star" />
-                        <label class="star2 star-13" for="star-13" title="Good"></label>
-                        <input class="star2 star-12" id="star-12" type="radio" name="star" />
-                        <label class="star2 star-12" for="star-12" title="Average"></label>
-                        <input class="star2 star-11" id="star-11" type="radio" name="star" />
-                        <label class="star2 star-11" for="star-11" title="Terrible"></label>
-                    </form>
-                </div>￼
-            </div>
+            <label for="phc">PHC Name:</label>
+            <input type="text" id="PHC" name="phc" required><br><br>
+            <label for="doctor">Dr.Name</label>
+            <input type="text" id="Doctor" name="doctor" required><br><br>
+            <h2>Ratings(rate out of 5):</h2>
+            <label for="doctor">Sanitations:</label>
+            <input type="text" id="sanitation" name="sanitation" required><br><br>
+            <label for="doctor">Treatment:</label>
+            <input type="text" id="treatment" name="treatment" required><br><br>
+            <label for="doctor">Sanitations:</label>
+            <input type="text" id="overall" name="overall" required><br><br>
             <br><br><br>
-            <button onclick="myFunction()">Submit</button>
+            <input type='submit' />
         </form>
     </div>
-    </div>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
-    <script type="text/javascript" src="/javascipts/index1.js"></script>
-    <script>
-function myFunction() {
-    alert("Thanks for your review!");
-}
-</script>
+    <script type="text/javascript" src="index.js"></script>
 </body>
 
 </html>

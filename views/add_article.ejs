@@ -1,21 +1,22 @@
 <html>
+
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <meta name="keywords" content="Register Login Widget template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login Signup Responsive web template, SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-  <!-- Custom Theme files -->
-  <link href="/css/style1.css" rel="stylesheet" type="text/css" media="all" />
-  <!--web-fonts-->
-  <link href='//fonts.googleapis.com/css?family=Jura:400,300,500,600' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="keywords" content="Register Login Widget template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login Signup Responsive web template, SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <!-- Custom Theme files -->
+    <link href="/css/style1.css" rel="stylesheet" type="text/css" media="all" />
+    <!--web-fonts-->
+    <link href='//fonts.googleapis.com/css?family=Jura:400,300,500,600' rel='stylesheet' type='text/css'>
     <!-- favicons
     ================================================== -->
     <link rel="shortcut icon" href="ASAP.ico" type="image/x-icon">
     <link rel="icon" href="ASAP.ico" type="image/x-icon">
     <style>
-    .navbar{
+        .navbar{
         overflow: hidden;
         background-color: #333 !important;
         top: 0; /* Position the navbar at the top of the page */
@@ -29,36 +30,40 @@
 
     </style>
 </head>
+
 <body>
-  <nav style="position: absolute" class="navbar navbar-default">
-      <div class="container-fluid">
-          <div class="navbar-header">
-              <a class="navbar-brand" href="/" style="font-size:32px">ASAP</a>
-          </div>
-          <ul class="nav navbar-nav">
-              <li><a href="/">Home</a></li>
-              <li><a href="/staff">Doctor</a></li>
-              <li><a href="/exchange"> Staff Exchange</a></li>
-              <li><a href="/medicine">Medicine Hub</a></li>
-              <li><a href="/record">Record Keeping</a></li>
-              <li><a href="/AmbulanceGo">AmbulanceGo</a></li>
-              <li><a href="/feedback">Feedback</a></li>
-              <li><a href="/review">Reviews</a></li>
-          </ul>
-          </ul>
-      </div>
-  </nav>
-  <h1>ADD MEDICINE</h1><div style="margin:10% auto;">
-  <form method='POST' action='/articles/add'>
-      <label for='title'>TITLE:</label>
-      <input name='title' type='text' required><br>
-      <label for='stock'>STOCK:</label>
-      <input name='stock' type='text' required><br>
-      <label for='expiry'>EXPIRY DATE:</label>
-      <input name='expiry' type='text' required><br>
-      <label for='precno'>PRESCRIPTION NO:</label>
-      <input name='precno' type='text' required><br>
-    <input type='submit' value='SUBMIT'>
-  </form></div>
+    <nav style="position: absolute" class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/" style="font-size:32px">ASAP</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/staff">Doctor</a></li>
+                <li><a href="/exchange"> Staff Exchange</a></li>
+                <li class="active"><a href="/medicine">Medicine Hub</a></li>
+                <li><a href="/record">Issue Record</a></li>
+                <li><a href="/AmbulanceGo">AmbulanceGo</a></li>
+                <li><a href="/feedback">Feedback</a></li>
+                <li><a href="/review">Reviews</a></li>
+            </ul>
+            </ul>
+        </div>
+    </nav>
+    <h1>ADD MEDICINE</h1>
+    <div style="margin:10% auto;">
+        <form method='POST' action='/articles/add'>
+            <label for='title'>TITLE:</label>
+            <input name='title' type='text' required><br>
+            <label for='stock'>STOCK:</label>
+            <input name='stock' type='text' required><br>
+            <label for='expiry'>EXPIRY DATE:</label>
+            <input name='expiry' type='text' required><br>
+            <label for='precno'>PRESCRIPTION NO:</label>
+            <input name='precno' type='text' required><br>
+            <input type='submit' value='SUBMIT'>
+        </form>
+    </div>
 </body>
+
 </html>

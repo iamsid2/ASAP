@@ -38,10 +38,6 @@ router.post('/reportupload', upload.single('report'), function (req, res, err) {
   }
 })
 
-router.get('/status', function (req, res) {
-  res.render('status')
-})
-
 router.get('/AmbulanceGo', function (req, res) {
   res.render('AmbulanceGo')
 })
@@ -110,24 +106,23 @@ router.get('/review', function (req, res) {
   res.render('review')
 })
 
-router.post('/review', function(req,res,err){
-  if (!req.body.phc || !req.body.doctor)
-    res.send("sorry you provided wrong info");
-  else {
-    var newReview = new Review({
-      phc: req.body.phc,
-      doctor: req.body.doctor
-    });
-    console.log(newReview);
-    newReview.save(function (err, review) {
-      if (err)
-        res.send(err);
-      else
-        console.log(review);
+router.post('/review', function (req, res) {
+  var newReview = new Review({
+    phc: req.body.phc,
+    doctor: req.body.doctor,
+    sanitation: parseInt(req.body.sanitation),
+    treatment: parseInt(req.body.treatment),
+    overall: parseInt(req.body.overall)
+  });
+  console.log(newReview);
+  newReview.save(function (err, Review) {
+    if (err)
+      res.send(err);
+    else {
+      console.log(Review);
       res.send("Thank you for your Review");
-    });
-  }
-
+    }
+  });
 })
 
 //home route

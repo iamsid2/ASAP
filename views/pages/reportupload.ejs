@@ -14,12 +14,12 @@
 <!-- Custom Theme files -->
 <!--web-fonts-->
 <link href='//fonts.googleapis.com/css?family=Jura:400,300,500,600' rel='stylesheet' type='text/css'>
-  <!-- favicons
+<!-- favicons
   ================================================== -->
-  <link rel="shortcut icon" href="ASAP.ico" type="image/x-icon">
-  <link rel="icon" href="ASAP.ico" type="image/x-icon">
-  <style>
-  .navbar{
+<link rel="shortcut icon" href="ASAP.ico" type="image/x-icon">
+<link rel="icon" href="ASAP.ico" type="image/x-icon">
+<style>
+    .navbar{
       overflow: hidden;
       background-color: #333 !important;
       top: 0; /* Position the navbar at the top of the page */
@@ -36,23 +36,23 @@
 </head>
 
 <body>
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="/" style="font-size:32px">ASAP</a>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/" style="font-size:32px">ASAP</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/staff">Doctor</a></li>
+                <li><a href="/exchange"> Staff Exchange</a></li>
+                <li><a href="/medicine">Medicine Hub</a></li>
+                <li class="active"><a href="/record">Issue Record</a></li>
+                <li><a href="/AmbulanceGo">AmbulanceGo</a></li>
+                <li><a href="/feedback">Feedback</a></li>
+                <li><a href="/review">Reviews</a></li>
+            </ul>
         </div>
-        <ul class="nav navbar-nav">
-            <li><a href="/">Home</a></li>
-            <li><a href="/staff">Doctor</a></li>
-            <li><a href="/exchange"> Staff Exchange</a></li>
-            <li><a href="/medicine">Medicine Hub</a></li>
-            <li><a href="/record">Record Keeping</a></li>
-            <li><a href="/AmbulanceGo">AmbulanceGo</a></li>
-            <li class="active"><a href="/feedback">Feedback</a></li>
-            <li><a href="/review">Reviews</a></li>
-        </ul>
-    </div>
-</nav>
+    </nav>
     <div style="text-align:center;">
         <form action="/reportupload" method="post" enctype="multipart/form-data">
             <label for="patientid">PatientID:</label>

@@ -11,12 +11,12 @@
     <!-- Custom Theme files -->
     <!--web-fonts-->
     <link href='//fonts.googleapis.com/css?family=Jura:400,300,500,600' rel='stylesheet' type='text/css'>
-      <!-- favicons
+    <!-- favicons
       ================================================== -->
-      <link rel="shortcut icon" href="ASAP.ico" type="image/x-icon">
-      <link rel="icon" href="ASAP.ico" type="image/x-icon">
-      <style>
-      .navbar{
+    <link rel="shortcut icon" href="ASAP.ico" type="image/x-icon">
+    <link rel="icon" href="ASAP.ico" type="image/x-icon">
+    <style>
+        .navbar{
           overflow: hidden;
           background-color: #333 !important;
           top: 0; /* Position the navbar at the top of the page */
@@ -36,24 +36,24 @@
 </head>
 
 <body>
-  <nav style="position: absolute" class="navbar navbar-default">
-      <div class="container-fluid">
-          <div class="navbar-header">
-              <a class="navbar-brand" href="/" style="font-size:32px">ASAP</a>
-          </div>
-          <ul class="nav navbar-nav">
-              <li><a href="/">Home</a></li>
-              <li><a href="/staff">Doctor</a></li>
-              <li  class="active"><a href="/exchange"> Staff Exchange</a></li>
-              <li><a href="/medicine">Medicine Hub</a></li>
-              <li><a href="/record">Record Keeping</a></li>
-              <li><a href="/AmbulanceGo">AmbulanceGo</a></li>
-              <li><a href="/feedback">Feedback</a></li>
-              <li><a href="/review">Reviews</a></li>
-          </ul>
-          </ul>
-      </div>
-  </nav>
+    <nav style="position: absolute" class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/" style="font-size:32px">ASAP</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/staff">Doctor</a></li>
+                <li class="active"><a href="/exchange"> Staff Exchange</a></li>
+                <li><a href="/medicine">Medicine Hub</a></li>
+                <li><a href="/record">Issue Record</a></li>
+                <li><a href="/AmbulanceGo">AmbulanceGo</a></li>
+                <li><a href="/feedback">Feedback</a></li>
+                <li><a href="/review">Reviews</a></li>
+            </ul>
+            </ul>
+        </div>
+    </nav>
     <div id='map' style='width: 800px; height: 500px;'></div>
 </body>
 
@@ -76,7 +76,7 @@
         url: '/requests/info',
         type: 'GET',
         dataType: 'json',
-        success: function(data) {
+        success: function (data) {
             console.log(data);
             var map = new mapboxgl.Map({
                 container: 'map',
@@ -86,7 +86,7 @@
             });
 
 
-            map.on('load', function() {
+            map.on('load', function () {
 
                 // Add a new source from our GeoJSON data and set the
                 // 'cluster' option to true.
@@ -102,7 +102,7 @@
                     "type": "circle",
                     "source": "help-requests",
                     "paint": {
-                    //Apply a  different color to different status fields
+                        //Apply a  different color to different status fields
                         'circle-color': {
                             property: 'status',
                             type: 'categorical',
@@ -120,7 +120,7 @@
             });
 
         },
-        error: function(httpRequest, status, error) {
+        error: function (httpRequest, status, error) {
             console.log(error);
         }
     });

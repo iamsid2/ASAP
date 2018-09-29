@@ -1,352 +1,176 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>AmbulanceGo</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <!---Custom CSS-->
-        <link rel="stylesheet" href="css/custom.css" type="text/css">
-        <!---BootStrap CSS-->
-        <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
-        <!---Theme Color CSS-->
-        <link rel="stylesheet" href="css/theme-color.css" type="text/css">
-        <!---Responsive CSS-->
-        <link rel="stylesheet" href="css/responsive.css" type="text/css">
-        <!---Owl Slider CSS-->
-        <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
-        <!---Font Awesome Icons CSS-->
-        <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-        <!---IconMoon Icons CSS-->
-        <link rel="stylesheet" href="css/icomoon.css" type="text/css">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="keywords" content="Register Login Widget template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login Signup Responsive web template, SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-        <!-- Custom Theme files -->
-        <!--web-fonts-->
-        <link href='//fonts.googleapis.com/css?family=Jura:400,300,500,600' rel='stylesheet' type='text/css'>
-          <!-- favicons
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AmbulanceGo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!---Custom CSS-->
+    <link rel="stylesheet" href="css/custom.css" type="text/css">
+    <!---BootStrap CSS-->
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <!---Theme Color CSS-->
+    <link rel="stylesheet" href="css/theme-color.css" type="text/css">
+    <!---Responsive CSS-->
+    <link rel="stylesheet" href="css/responsive.css" type="text/css">
+    <!---Owl Slider CSS-->
+    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+    <!---Font Awesome Icons CSS-->
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <!---IconMoon Icons CSS-->
+    <link rel="stylesheet" href="css/icomoon.css" type="text/css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Register Login Widget template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login Signup Responsive web template, SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <!-- Custom Theme files -->
+    <!--web-fonts-->
+    <link href='//fonts.googleapis.com/css?family=Jura:400,300,500,600' rel='stylesheet' type='text/css'>
+    <!-- favicons
           ================================================== -->
-          <link rel="shortcut icon" href="ASAP.ico" type="image/x-icon">
-          <link rel="icon" href="ASAP.ico" type="image/x-icon">
-          <style>
+    <link rel="shortcut icon" href="ASAP.ico" type="image/x-icon">
+    <link rel="icon" href="ASAP.ico" type="image/x-icon">
+    <style>
+        .navbar {
+            overflow: hidden;
+            background-color: #333 !important;
+            top: 0;
+            /* Position the navbar at the top of the page */
+            width: 100%;
+            /* Full width */
+            box-shadow: 3px 3px 8px hsl(0, 0%, 80%);
+        }
 
+        .navbar a:hover {
+            color: green !important;
+            font-size: 1.5em;
+        }
+    </style>
 
-          .navbar{
-              overflow: hidden;
-              background-color: #333 !important;
-              top: 0; /* Position the navbar at the top of the page */
-              width: 100%; /* Full width */
-          	box-shadow: 3px 3px 8px hsl(0, 0%, 80%);
-          }
-          .navbar a:hover{
-          color: green !important;
-          font-size: 1.5em;
-          }
+    <!---Font Family Exo+2 CSS-->
+    <link href='https://fonts.googleapis.com/css?family=Exo+2:400,300,600,700,900,800,200,100,500,400italic' rel='stylesheet'
+        type='text/css'>
+</head>
 
-          </style>
+<body>
 
-        <!---Font Family Exo+2 CSS-->
-        <link href='https://fonts.googleapis.com/css?family=Exo+2:400,300,600,700,900,800,200,100,500,400italic' rel='stylesheet' type='text/css'>
-    </head>
-    <body>
-
-        <!--Wrapper Content Start-->
-        <div id="wrapper">
-            <!--Header Start-->
-            <header class="cp_header">
-                <div id="cp-slide-menu" class="cp_side-navigation">
-                     <ul class="navbar-nav">
-                        <li id="close"><a href="#"><i class="fa fa-close"></i></a></li>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="booking.html">View a booking</a>
-                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Contact Us<i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="contact-us.html">Contact Us</a></li>
-                                <li><a href="contact-us2.html">Contact Us 2</a></li>
-                            </ul>
-                        </li>
+    <!--Wrapper Content Start-->
+    <div id="wrapper">
+        <!--Header Start-->
+        <header class="cp_header">
+            <div id="cp-slide-menu" class="cp_side-navigation">
+                <ul class="navbar-nav">
+                    <li id="close"><a href="#"><i class="fa fa-close"></i></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="booking.html">View a booking</a>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                            aria-expanded="false">Contact Us<i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="contact-us.html">Contact Us</a></li>
+                            <li><a href="contact-us2.html">Contact Us 2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div id="cp-slide-search" class="cp_side-search">
+                <form method="get">
+                    <input type="text" placeholder="Enter Your Name..." required>
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="/" style="font-size:32px">ASAP</a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/staff">Doctor</a></li>
+                        <li><a href="/exchange"> Staff Exchange</a></li>
+                        <li><a href="/medicine">Medicine Hub</a></li>
+                        <li><a href="/record">Issue Record</a></li>
+                        <li class="active"><a href="/AmbulanceGo">AmbulanceGo</a></li>
+                        <li><a href="/feedback">Feedback</a></li>
+                        <li><a href="/review">Reviews</a></li>
                     </ul>
                 </div>
-                <div id="cp-slide-search" class="cp_side-search">
-                    <form method="get">
-                        <input type="text" placeholder="Enter Your Name..." required>
-                        <button type="submit"><i class="fa fa-search"></i></button>
-                    </form>
+            </nav>
+        </header>
+        <!--Header End-->
+
+        <!--Banner Start-->
+        <div class="cp_banner">
+            <!--Banner Slider Start-->
+            <div class="owl-carousel" id="cp_banner-slider">
+                <!--Banner Item Holder Start-->
+                <div class="item" style="background-color:black;">
+                    <img src="images/amb2.jpg" alt="">
+                    <!--Banner Caption Start-->
+                    <div class="cp-banner-caption">
+                        <div class="container">
+                            <div class="banner-inner-holder">
+                                <strong class="banner-title">Call an Ambulance</strong>
+                                <h2>A RELIABLE WAY FOR EMERGENCY</h2>
+                                <a href="#" class="cp-btn-style1">Search Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Banner Caption End-->
                 </div>
-                <nav class="navbar navbar-default">
-                    <div class="container-fluid">
-                        <div class="navbar-header">
-                            <a class="navbar-brand" href="/" style="font-size:32px">ASAP</a>
-                        </div>
-                        <ul class="nav navbar-nav">
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/staff">Doctor</a></li>
-                            <li><a href="/exchange"> Staff Exchange</a></li>
-                            <li><a href="/medicine">Medicine Hub</a></li>
-                            <li><a href="/record">Record Keeping</a></li>
-                            <li class="active"><a href="/AmbulanceGo">AmbulanceGo</a></li>
-                            <li><a href="/feedback">Feedback</a></li>
-                            <li><a href="/review">Reviews</a></li>
-                        </ul>
-                    </div>
-                </nav>
-                <!--Navigation Start-->
-                <!-- <div class="cp-navigation-row">
-                    <div class="container">
-                        <div class="row">
-                             <div class="col-md-12">
-                                Top Bar Start
-                                <div class="cp-topbar">
-                                    <ul class="top-listed">
-                                        <li><a href="login.html">Log in</a></li>
-                                        <li><a href="register.html">Register</a></li>
-                                        <li>
-                                            <div class="dropdown">
-                                              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                              INDIA
-                                                <i class="fa fa-caret-down"></i>
-                                              </button>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="dropdown">
-                                              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                             Cur
-                                                <i class="fa fa-caret-down"></i>
-                                              </button>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <span class="tp-num">Call Us. +91 123 456 789</span>
-                                </div><
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3 col-sm-12 col-xs-6">
-                                Logo Start
-                                <strong class="cp-logo">
-                                    <a href="index.html"><img src="images/cp-logo.png" alt=""></a>
-                                </strong><
-                            </div>
-                            <div class="col-md-9 col-sm-12 col-xs-6">
-                                Nav Holder Start
-                                <div class="cp-nav-holder">
-                                    <ul class="navbar-nav">
-                                        <li style="color:black;"><a href="index.html">Home</a></li>
-                                        <li><a href="about.html">Doctors</a></li>
-                                        <li><a href="offers.html">Staff Exchange</a></li>
-                                        <li><a href="booking.html">Medicine Hub</a></li>
-                                        <li><a href="booking.html">Record Keeping</a></li>
-                                        <li><a href="index.html">AmbulanceGo</a></li>
-                                        <li><a href="booking.html">Feedback</a></li>
-                                        <li><a href="booking.html">Reviews</a></li>
-                                    </ul>
-                                    <ul class="nav-right-listed">
-                                        <li id="search-push"><i class="fa fa-search"></i></li>
-                                        <li id="push" class="cp-sidemenu"><a href="#"><i class="fa fa-align-justify"></i></a></li>
-                                    </ul>
-                                </div>
+                <!--Banner Item Holder End-->
+
+                <!--Banner Item Holder Start-->
+                <div class="item" style="background-color:black;">
+                    <img src="images/amb2.jpg" alt="">
+                    <!--Banner Caption Start-->
+                    <div class="cp-banner-caption">
+                        <div class="container">
+                            <div class="banner-inner-holder">
+                                <strong class="banner-title">SAVE LIFE!</strong>
+                                <h2>Every minute of a life counts!</h2>
+                                <a href="#" class="cp-btn-style1">Book Now</a>
                             </div>
                         </div>
                     </div>
-                </div><!--Navigation End--> -->
-            </header><!--Header End-->
+                    <!--Banner Caption End-->
+                </div>
+                <!--Banner Item Holder End-->
 
-            <!--Banner Start-->
-            <div class="cp_banner">
-                <!--Banner Slider Start-->
-                 <div class="owl-carousel" id="cp_banner-slider">
-                    <!--Banner Item Holder Start-->
-                    <div class="item" style="background-color:black;">
-                        <img src="images/amb2.jpg" alt="">
-                        <!--Banner Caption Start-->
-                        <div class="cp-banner-caption">
-                            <div class="container">
-                                <div class="banner-inner-holder">
-                                    <strong class="banner-title">Call an Ambulance</strong>
-                                    <h2>A RELIABLE WAY FOR EMERGENCY</h2>
-                                    <a href="#" class="cp-btn-style1">Search Now</a>
-                                </div>
+                <!--Banner Item Holder Start-->
+                <div class="item">
+                    <img src="images/amb2.jpg" alt="">
+                    <!--Banner Caption Start-->
+                    <div class="cp-banner-caption">
+                        <div class="container">
+                            <div class="banner-inner-holder">
+                                <strong class="banner-title">Get Startd!</strong>
+                                <h2>You can help the needy</h2>
+                                <a href="#" class="cp-btn-style1">Search Now</a>
                             </div>
-                        </div><!--Banner Caption End-->
-                     </div><!--Banner Item Holder End-->
-
-                     <!--Banner Item Holder Start-->
-                    <div class="item" style="background-color:black;">
-                        <img src="images/amb2.jpg" alt="">
-                        <!--Banner Caption Start-->
-                        <div class="cp-banner-caption">
-                            <div class="container">
-                                <div class="banner-inner-holder">
-                                    <strong class="banner-title">SAVE LIFE!</strong>
-                                    <h2>Every minute of a life counts!</h2>
-                                    <a href="#" class="cp-btn-style1">Book Now</a>
-                                </div>
-                            </div>
-                        </div><!--Banner Caption End-->
-                     </div><!--Banner Item Holder End-->
-
-                    <!--Banner Item Holder Start-->
-                    <div class="item">
-                        <img src="images/amb2.jpg" alt="">
-                        <!--Banner Caption Start-->
-                        <div class="cp-banner-caption">
-                            <div class="container">
-                                <div class="banner-inner-holder">
-                                    <strong class="banner-title">Get Startd!</strong>
-                                    <h2>You can help the needy</h2>
-                                    <a href="#" class="cp-btn-style1">Search Now</a>
-                                </div>
-                            </div>
-                        </div><!--Banner Caption End-->
-                     </div><!--Banner Item Holder End-->
-
-                 </div><!--Banner Slider End-->
-            </div><!--Banner End-->
-
-            <!--Main Content Start-->
-            <!-- <div id="cp-main-content"> -->
-
-                <!--Booking Section Start-->
-                <!-- <section class="cp-booking-section pd-b80">
-                    <div class="container">
-                        <div class="cp-heading-style1">
-                            <h2>Book <span>AmbulanceGo Now</span></h2>
-                        </div>
-                        <div class="cp-booking-form-outer">
-                             <form method="get">
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-12">
-                                        <div class="booking-inner-holder">
-                                            <label>Pick-up Location</label>
-                                            <select>
-                                                <option value="">Pune</option>
-                                            </select>
-                                        </div>
-                                        <div class="booking-inner-holder">
-                                            <label>Pick-up Date</label>
-                                            <div class="booking-date">
-                                                <div class="inner">
-                                                    <input type="text" placeholder="31">
-                                                    <span>Day</span>
-                                                </div>
-                                                <div class="inner">
-                                                    <input type="text" placeholder="10">
-                                                    <span>Month</span>
-                                                </div>
-                                                <div class="inner">
-                                                    <input type="text" placeholder="2016">
-                                                    <span>Year</span>
-                                                </div>
-                                                <div class="inner inner2">
-                                                    <span>at</span>
-                                                </div>
-                                                <div class="inner">
-                                                   <select>
-                                                       <option value="">20</option>
-                                                       <option value="">19</option>
-                                                       <option value="">18</option>
-                                                       <option value="">17</option>
-                                                       <option value="">16</option>
-                                                   </select>
-                                                    <span>Hours</span>
-                                                </div>
-                                                <div class="inner">
-                                                    <select>
-                                                       <option value="">10</option>
-                                                       <option value="">11</option>
-                                                       <option value="">12</option>
-                                                       <option value="">13</option>
-                                                       <option value="">14</option>
-                                                   </select>
-                                                    <span>Minutas</span>
-                                                </div>
-                                                <div class="inner inner2">
-                                                    <i class="fa fa-calendar-check-o"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-md-6 col-sm-12">
-                                        <div class="first-col">
-                                            <div class="booking-inner-holder">
-                                                <label>Drop-up Location</label>
-                                                <select>
-                                                    <option value="">Pune</option>
-
-                                                </select>
-                                            </div>
-                                            <div class="booking-inner-holder">
-                                                <label>Drop-off Date </label>
-                                                <div class="booking-date">
-                                                    <div class="inner">
-                                                        <input type="text" placeholder="31">
-                                                        <span>Day</span>
-                                                    </div>
-                                                    <div class="inner">
-                                                        <input type="text" placeholder="10">
-                                                        <span>Month</span>
-                                                    </div>
-                                                    <div class="inner">
-                                                        <input type="text" placeholder="2016">
-                                                        <span>Year</span>
-                                                    </div>
-                                                    <div class="inner inner2">
-                                                        <span>at</span>
-                                                    </div>
-                                                    <div class="inner">
-                                                       <select>
-                                                           <option value="">20</option>
-                                                           <option value="">19</option>
-                                                           <option value="">18</option>
-                                                           <option value="">17</option>
-                                                           <option value="">16</option>
-                                                       </select>
-                                                        <span>Hours</span>
-                                                    </div>
-                                                    <div class="inner">
-                                                        <select>
-                                                           <option value="">10</option>
-                                                           <option value="">11</option>
-                                                           <option value="">12</option>
-                                                           <option value="">13</option>
-                                                           <option value="">14</option>
-                                                       </select>
-                                                        <span>Minutas</span>
-                                                    </div>
-                                                    <div class="inner inner2">
-                                                        <i class="fa fa-calendar-check-o"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </form>
                         </div>
                     </div>
-                </section>
+                    <!--Banner Caption End-->
+                </div>
+                <!--Banner Item Holder End-->
 
-                <!--Taxi Section Start-->
+            </div>
+            <!--Banner Slider End-->
+        </div>
+        <!--Banner End-->
 
-
-        <!-- </div> -->
         <div style="float:left;margin-left:34%;font-size:1.5em">
-          <h3>Patient</h3>
-        <button style="padding:4px;" class="btn btn-success"><a style="color:ghostwhite" href="/citizen?userId=XYZ">Book Ambulance</a></button>
+            <h3>Patient</h3>
+            <button style="padding:4px;" class="btn btn-success"><a style="color:ghostwhite" href="/citizen?userId=XYZ">Book
+                    Ambulance</a></button>
         </div>
 
         <div style="float:right;margin-right:34%;font-size:1.5em; margin-bottom:5%">
-          <h3>Ambulance</h3>
-          <button style="padding:4px;" class="btn btn-success"><a style="color:ghostwhite"href="/cop?userId=03">Help Citizen</a></button>
+            <h3>Ambulance</h3>
+            <button style="padding:4px;" class="btn btn-success"><a style="color:ghostwhite" href="/cop?userId=07">Help
+                    Citizen</a></button>
         </div>
 
         <!---JQuery-1.11.3.js-->
@@ -366,5 +190,6 @@
         <script type="text/javascript" src="js/custom-script.js"></script>
 
 
-    </body>
+</body>
+
 </html>
