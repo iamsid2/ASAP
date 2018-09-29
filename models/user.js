@@ -34,15 +34,13 @@ UserSchema.statics.authenticate = function (staffId, password, callback) {
         err.status = 401;
         return callback(err);
       }
-      bcrypt.compare(password, user.password, function (err, result) {
-        if (result === true) {
+      // bcrypt.compare(password, user.password, function (err, result) {
+      //   if (result === true) {
           return callback(null, user);
-        } else {
-          return callback();
-        }
+        // } else {
+        //   return callback();
       })
-    });
-}
+      };
 
 //hashing a password before saving it to the database
 // UserSchema.pre('save', function (next) {

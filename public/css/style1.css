@@ -14,7 +14,7 @@ p{
 /* Card Based Layout - Base styles */
 
 body {
-	background:#237f2f;
+	background:#0a4981;
 }
 .navbar{
     overflow: hidden;
@@ -166,7 +166,7 @@ img {
 
 .card {
 	background: white;
-	margin-bottom: 2em;	
+	margin-bottom: 2em;
 }
 
 .card a {
@@ -241,7 +241,7 @@ font-size: 1.2em;
     margin-top: 20px;
     overflow: hidden;
   }
-  
+
 /* Style the buttons */
 .btn {
   border: none;
@@ -378,7 +378,7 @@ h1 {
     background: #0b4379;
     box-shadow: 0px 2px 1px rgba(28, 28, 29, 0.42);
 	border-radius: 22px;
-	
+
 }
 .signin-form input[type="submit"]:hover {
     color: #fff;

@@ -12,6 +12,8 @@
         table,
         th,
         td {
+          color: ghostwhite;
+          font-size: 1.5em;
             border: 6px solid black;
             padding: 10px;
         }
@@ -20,20 +22,54 @@
             border-spacing: 30px;
         }
         #myMedicine {
+          width:90%;
             background-position: 10px 10px;
             background-repeat: no-repeat;
-            width: 100%;
             font-size: 16px;
             padding: 12px 20px 12px 40px;
-            border: 1px solid #ddd;
+            border: 2px solid #ddd;
             margin-bottom: 12px;
+
 }
+.search{
+  margin: 0 auto;
+display: inline-block;
+width: 100%;
+text-align:center
+
+}
+body{
+  background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,0.9750062749626931) 0%, rgba(9,9,121,0.8879276232772999) 35%, rgba(0,212,255,1) 100%);
+
+}
+.navbar{
+    overflow: hidden;
+    background-color: #333 !important;
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+  box-shadow: 3px 3px 8px hsl(0, 0%, 80%);
+  font-size: 1.2em;
+}
+.navbar a:hover{
+color: green !important;
+font-size: 1.5em;
+}
+
     </style>
-    
-    <!-- favicons
-    ================================================== -->
-    <link rel="shortcut icon" href="ASAP.ico" type="image/x-icon">
-    <link rel="icon" href="ASAP.ico" type="image/x-icon">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Register Login Widget template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login Signup Responsive web template, SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <!-- Custom Theme files -->
+    <!--web-fonts-->
+    <link href='//fonts.googleapis.com/css?family=Jura:400,300,500,600' rel='stylesheet' type='text/css'>
+
+      <!-- favicons
+      ================================================== -->
+      <link rel="shortcut icon" href="ASAP.ico" type="image/x-icon">
+      <link rel="icon" href="ASAP.ico" type="image/x-icon">
+
 </head>
 
 <body>
@@ -55,12 +91,12 @@
             </ul>
         </div>
     </nav>
+    <h1 style="font-size:3em;color:white;padding-bottom:2%;padding-top: 2%;">MEDICINES HUB</h1><hr>
 
-    <div>
-        <input type="text" id="myMedicine" onkeyup="medFilter()" placeholder="Search for medicines..." title="Type in a medicine">
+    <div class="search" style="padding-bottom:1%;">
+        <input type="text" id="myMedicine" onkeyup="medFilter()" placeholder="Search for medicines..." title="Type in a medicine" width="90%">
     </div>
-    <h1>MEDICINES HUB</h1>
-    <table id="medicineTable" name='medicine' style="width:100%">
+    <table id="medicineTable" name='medicine' style="width:100%;">
         <tr>
             <th>Medicine Name:</th>
             <th>Units Left:</th>
@@ -81,11 +117,11 @@
         <% } %>
     </table>
     <div style="text-align:center;color: black;font-size: 3em;">
-        <h3 style="text-align:center;color: black;font-size: 1em;">Add Medicine</h3>
+        <h3 style="text-align:center;color: black;font-size: 1em;margin-top:7%">Add Medicine</h3><hr>
         <form action="/login" method="GET">
             <h3 style="text-align:center;color: black;font-size: .5em;">Click the button for login <span style="color:gold">Only
                     for Administartors use</span> </h3>
-            <button style="font-size: .4em;" type="submit">Go to Login</button>
+            <button style="font-size: .4em;padding:5px;background:green" type="submit">Go to Login</button>
         </form>
     </div>
     <script src="javascript/index1.js" type="text/javascript"></script>

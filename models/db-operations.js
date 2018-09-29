@@ -57,13 +57,13 @@ function saveRequest(db, requestId, requestTime, location, citizenId, status, ca
     });
 }
 
-function updateRequest(db, issueId, copId, status, callback) {
+function updateRequest(db, issueId, ambulanceId, status, callback) {
     db.collection("requestsData").update({
         "_id": issueId
     }, {
         $set: {
             status: status,
-            ambulanceId: copId
+            ambulanceId: ambulanceId
         }
     }, function(err, results) {
         if (err) {
