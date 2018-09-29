@@ -4,11 +4,12 @@ var fs = require('fs');
 var path = require('path');
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
-mongoose.connect('mongodb://localhost/report');
+// mongoose.connect('mongodb://localhost/report');
 var Report = require('../models/report');
 var upload = require('../multer/storage');
 var Feedback = require('../models/feedback');
 var Article = require('../models/article');
+var Review = require('../models/review');
 
 router.get('/login', function (req, res) {
   res.render('pages/login');
@@ -107,6 +108,26 @@ router.post('/feedback', function (req, res) {
 
 router.get('/review', function (req, res) {
   res.render('review')
+})
+
+router.post('/review', function(req,res,err){
+  if (!req.body.phc || !req.body.doctor)
+    res.send("sorry you provided wrong info");
+  else {
+    var newReview = new Review({
+      phc: req.body.phc,
+      doctor: req.body.doctor
+    });
+    console.log(newReview);
+    newReview.save(function (err, review) {
+      if (err)
+        res.send(err);
+      else
+        console.log(review);
+      res.send("Thank you for your Review");
+    });
+  }
+
 })
 
 //home route

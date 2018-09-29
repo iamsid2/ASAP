@@ -8,7 +8,6 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" type="text/css" href="/css/style.css">
         <link rel="stylesheet" type="text/css" href="/css/star.css">
-        <!-- <link rel="stylesheet" href="starability-all.min.css"> -->
         <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     </head>
     <body>
@@ -30,15 +29,15 @@
           </div>
       </nav>
         <div>
+          <form action="/review" method="post">
             <h2>PHC Name:</h2>
-            <input type="text" id="PHC">
+            <input type="text" id="PHC" name="phc">
             <h2>Dr.Name</h2>
-            <input type="text" id="Doctor">
+            <input type="text" id="Doctor" name="doctor">￼￼￼
             <div>
                 <h2>Review:</h2>
                 <div class="stars">
                     <h2>Sanitations</h2>
-                    <form action="">
                         <input class="star star-5" id="star-5" type="radio" name="star"/>
                         <label class="star star-5" for="star-5" title="Amazing"></label>
                         <input class="star star-4" id="star-4" type="radio" name="star"/>
@@ -49,11 +48,9 @@
                         <label class="star star-2" for="star-2" title="Average"></label>
                         <input class="star star-1" id="star-1" type="radio" name="star"/>
                         <label class="star star-1" for="star-1" title="Terrible"></label>
-                    </form>
                 </div>
                 <div class="stars1">
                     <h2>Treatment</h2>
-                    <form action="">
                         <input class="star1 star-10" id="star-10" type="radio" name="star"/>
                         <label class="star1 star-10" for="star-10" title="Amazing"></label>
                         <input class="star1 star-9" id="star-9" type="radio" name="star"/>
@@ -63,12 +60,12 @@
                         <input class="star1 star-7" id="star-7" type="radio" name="star"/>
                         <label class="star1 star-7" for="star-7" title="Average"></label>
                         <input class="star1 star-6" id="star-6" type="radio" name="star"/>
-                        <label class="star1 star-6" for="star-6" title="Terrible"></label>
-                    </form>
+                        <label class="star1 star-6" for="star-6" title=￼"Terrible"></label>
                 </div>
                 <div class="stars2">
-                    <h2>Overall</h2>
-                    <form action="">
+                              <input class="star1 star-7" id="star-7" type="radio" name="star"/>
+                        <input class="star1 star-7" id="star-7" type="radio" name="star"/>
+              <h2>Overall</h2>
                         <input class="star2 star-15" id="star-15" type="radio" name="star"/>
                         <label class="star2 star-15" for="star-15" title="Amazing"></label>
                         <input class="star2 star-14" id="star-14" type="radio" name="star"/>
@@ -79,11 +76,11 @@
                         <label class="star2 star-12" for="star-12" title="Average"></label>
                         <input class="star2 star-11" id="star-11" type="radio" name="star"/>
                         <label class="star2 star-11" for="star-11" title="Terrible"></label>
-                    </form>
-                </div>
+                </div>￼
             </div>
             <br><br><br>
-            <button onclick="accept1()">Submit</button>
+            <button>Submit</button>
+          </form>
         </div>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
         <script type="text/javascript" src="index.js"></script>

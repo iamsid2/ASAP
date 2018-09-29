@@ -4,6 +4,7 @@ var User = require('../models/user');
 const Availables = require('../models/avail');
 const Requires = require('../models/req');
 var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 mongoose.connect('mongodb://localhost/test11');
 var db = mongoose.connection;
 

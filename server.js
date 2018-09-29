@@ -16,6 +16,11 @@ var multer = require('multer');
 const Availables = require('./models/avail');
 const Requires = require('./models/req');
 const Users = require('./models/user');
+var Report = require('./models/report');
+var upload = require('./multer/storage');
+var Feedback = require('./models/feedback');
+var Article = require('./models/article');
+var Review = require('./models/review');
 
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
