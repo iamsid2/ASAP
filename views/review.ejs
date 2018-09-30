@@ -32,7 +32,11 @@
       color: green !important;
       font-size: 1.5em;
       }
+      body {
+            background: rgb(2, 0, 36);
+            background: linear-gradient(90deg, rgba(2, 0, 36, 0.9750062749626931) 0%, rgba(9, 9, 121, 0.8879276232772999) 35%, rgba(0, 212, 255, 1) 100%);
 
+        }
       </style>
 </head>
 
@@ -54,21 +58,24 @@
             </ul>
         </div>
     </nav>
-    <div>
+    <h1 style="font-size:3em;color:white;padding-bottom:1%;padding-top: 4%;">REVIEWS</h1><hr>
+
+    <div style="text-align:center;box-shadow:5px 10px black;border: 2px blue solid;width:50%;margin: 6% auto;">
+
         <form action="/review" method="post">
-            <label for="phc">PHC Name:</label>
-            <input type="text" id="PHC" name="phc" required><br><br>
-            <label for="doctor">Dr.Name</label>
-            <input type="text" id="Doctor" name="doctor" required><br><br>
-            <h2>Ratings(rate out of 5):</h2>
-            <label for="doctor">Sanitations:</label>
-            <input type="text" id="sanitation" name="sanitation" required><br><br>
-            <label for="doctor">Treatment:</label>
-            <input type="text" id="treatment" name="treatment" required><br><br>
-            <label for="doctor">Sanitations:</label>
-            <input type="text" id="overall" name="overall" required><br><br>
-            <br><br><br>
-            <input type='submit' />
+            <label for="phc" style="color:ghostwhite; padding:10px; font-size:1.5em;padding-top: 20px" >PHC Name:</label>
+            <input type="text" id="PHC" class="form-control" style="width:70%;margin:0 auto" name="phc" required><br><br>
+            <label for="doctor" style="color:ghostwhite; padding:10px; font-size:1.5em;">Dr.Name</label>
+            <input type="text" id="Doctor" class="form-control" style="width:70%;margin:0 auto" name="doctor" required><br><br>
+            <h2 style="color:black; padding:10px; font-size:2em;">Ratings(rate out of 5):</h2>
+            <label for="doctor" style="color:ghostwhite; padding:10px; font-size:1.5em;">Sanitations:</label>
+            <input type="text" id="sanitation" class="form-control" style="width:70%;margin:0 auto"name="sanitation" required><br><br>
+            <label for="doctor" style="color:ghostwhite; padding:10px; font-size:1.5em;">Treatment:</label>
+            <input type="text" id="treatment" class="form-control" style="width:70%;margin:0 auto" name="treatment" required><br><br>
+            <label for="doctor" style="color:ghostwhite; padding:10px; font-size:1.5em;">Sanitations:</label>
+            <input type="text" id="overall" name="overall" class="form-control" style="width:70%;margin:0 auto"required><br><br>
+            <br><br>
+<button type="submit" class="btn btn-success" style="padding:5px; font-size:1.2em;">Submit</button>
         </form>
     </div>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>

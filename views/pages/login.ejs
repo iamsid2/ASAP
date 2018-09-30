@@ -57,14 +57,18 @@
             </ul>
         </div>
     </nav>
-    <h1 style="color:white;margin-top:10%;"> Enter Login Details</h1>
-    <div style="text-align:center;border:2px solid black;width:50%; margin: 5% auto;">
+    <h1 style="color:white;margin-top:8%;"> Enter Login Details</h1>
+    <div style="text-align:center;border:2px solid black;width:40%; margin: 5% auto;    box-shadow: 3px 3px 8px hsl(0, 0%, 80%);padding: 10PX;    ">
         <form action="/login" method="post" id="loginform">
-            <label for="user">UserId</label><br><br>
-            <input type="text" name="user" id="user"><br><br>
-            <label for="pass">Password</label><br><br>
-            <input type="password" name="user" id="pass"><br><br>
-            <input type="submit">
+            <div class="form-group">
+            <label for="user" style="color:blanchedalmond">UserId</label><br><br>
+            <input type="text" name="user"  class="form-control" style="width:70%;margin:0 auto"  id="user"><br>
+            </div>
+            <div class="form-group">
+            <label for="pass" style="color:blanchedalmond">Password</label><br><br>
+            <input type="password" name="user" class="form-control" style="width:70%;margin:0 auto" id="pass"><br>
+            </div>
+            <input type="submit" class="BTN BTN-SUCCESS">
         </form>
     </div>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>

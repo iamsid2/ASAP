@@ -11,6 +11,8 @@
         table,
         th,
         td {
+            color: ghostwhite;
+            font-size: 1.5em;
             border: 6px solid black;
             padding: 10px;
         }
@@ -45,6 +47,11 @@
             color: green !important;
             font-size: 1.5em;
         }
+        body {
+            background: rgb(2, 0, 36);
+            background: linear-gradient(90deg, rgba(2, 0, 36, 0.9750062749626931) 0%, rgba(9, 9, 121, 0.8879276232772999) 35%, rgba(0, 212, 255, 1) 100%);
+
+        }
     </style>
 </head>
 
@@ -67,7 +74,7 @@
             </ul>
         </div>
     </nav>
-    <h1>MEDICINES HUB</h1>
+    <h1 style="font-size:3em;color:white;padding-bottom:2%;padding-top: 5%;">MEDICINES HUB</h1>
     <table name='medicine' style="width:100%">
         <tr>
             <th>Medicine Name:</th>
@@ -93,8 +100,9 @@
             <td><a href="/article/edit/<%=articles[i]._id%>">EDIT</a></td>
         </tr>
         <% } %>
-    </table>
-    <button><a href="/add">ADD MEDICINE</a></button>
+    </table><br><br>
+    <div style="text-align:center;margin: 0 auto;font-size:1.5em;">
+    <button class="btn btn-success" ><a href="/add" style="color:blanchedalmond">ADD MEDICINE</a></button></div>
 
 </body>
 

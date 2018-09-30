@@ -50,18 +50,27 @@
             </ul>
         </div>
     </nav>
-    <h1>ADD MEDICINE</h1>
-    <div style="margin:10% auto;">
-        <form method='POST' action='/articles/add'>
-            <label for='title'>TITLE:</label>
-            <input name='title' type='text' required><br>
-            <label for='stock'>STOCK:</label>
-            <input name='stock' type='text' required><br>
-            <label for='expiry'>EXPIRY DATE:</label>
-            <input name='expiry' type='text' required><br>
-            <label for='precno'>PRESCRIPTION NO:</label>
-            <input name='precno' type='text' required><br>
-            <input type='submit' value='SUBMIT'>
+    <h1 style="font-size:3em;color:white;padding-bottom:2%;padding-top: 5%;">ADD MEDICINES</h1><HR>
+        <div style="box-shadow:5px 10px black;border: 2px blue solid;width:40%;margin: 6% auto;padding: 3%;">
+                <form method='POST' action='/articles/add'>
+                    <div class="form-group">
+            <label for='title' style="color:ghostwhite; padding:10px; font-size:1.5em;">TITLE:</label>
+            <input name='title' type='text' class="form-control" required><br></div>
+            <div class="form-group">
+            <label for='stock' style="color:ghostwhite; padding:10px; font-size:1.5em;">STOCK:</label>
+            <input name='stock' type='text' class="form-control" required><br>
+            </div>
+            <div class="form-group">
+            <label for='expiry' style="color:ghostwhite; padding:10px; font-size:1.5em;">EXPIRY DATE:</label>
+            <input name='expiry' type='text' class="form-control" required><br>
+            </div>
+            <div class="form-group">
+            <label for='precno' style="color:ghostwhite; padding:10px; font-size:1.5em;">PRESCRIPTION NO:</label>
+            <input name='precno' type='text' class="form-control" required><br>
+            </div>
+            <DIV style="text-align:center">
+            <button type="submit"  style="padding:5px; font-size:1.2em;background: green;COLOR:white">Submit</button>
+</DIV>
         </form>
     </div>
 </body>
