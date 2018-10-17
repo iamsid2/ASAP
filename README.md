@@ -1,5 +1,6 @@
 # Project Title
 
+The title of our project is ASAP(A Software app for automation of PHCs)
 This project aims to give better PHC services to the different sections of a society using an interactive online interface.
 Primary health care leads to the over all well being of a society and implementing development practises in this domain ensures the development of the entire city.
 
@@ -67,5 +68,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 * Hat tip to anyone whose code was used
 * Inspiration
-* For automation of hospitals
 
