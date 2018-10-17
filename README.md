@@ -22,8 +22,9 @@ You should also have mongodb installed in your system.
 Open terminal and then write in the terminal the following to store the ambulance details in your database
 
 ```
-mongoimport --db ambulancego --collection policeData --drop --file ./path/to/jsonfile.json
+mongoimport --db ambulancego --collection policeData --drop --file ./path/Pune-Hackathon/ambulance.json
 ```
+where path = the directory where the Pune-Hackathon folder is downloaded
 
 After the dataset gets imported run in your terminal
 
@@ -47,7 +48,7 @@ localhost:8080
 * [socket.io](https://socket.io/docs/) - for creating chatrooms
 * [Bootstrap](https://getbootstrap.com/docs/4.1/getting-started/introduction/) - For styling and making the site responsive
 * [Javascript](https://devdocs.io/javascript/) - used for scripting
-* [jqwery](https://api.jquery.com/) - used to make js simpler
+* [jQuery](https://api.jquery.com/) - used to make js simpler
 * [ejs](http://ejs.co/) - It is the templating lirary used
 * [CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS) - It is used for styling purpose
 
