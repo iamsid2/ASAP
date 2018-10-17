@@ -7,7 +7,9 @@ Primary health care leads to the over all well being of a society and implementi
 ## Getting Started
 
 Git clone or download this Project as zip and then open terminal and write 
+
 ...
+
 npm install
 ...
 
@@ -19,7 +21,9 @@ You should also have mongodb installed in your system.
 ### Installing
 
 Open terminal and then write in the terminal the following to store the ambulance details in your database
+
 ...
+
 mongoimport --db ambulancego --collection policeData --drop --file ./path/to/jsonfile.json
 ...
 
@@ -31,7 +35,9 @@ nodemon server
 
 When it shows The app in running in port 8080
 Open your browser and goto
+
 ...
+
 localhost:8080
 ...
 
