@@ -24,7 +24,7 @@ Open terminal and then write in the terminal the following to store the ambulanc
 ```
 mongoimport --db ambulancego --collection policeData --drop --file ./path/Pune-Hackathon/ambulance.json
 ```
-where path = the directory where the Pune-Hackathon folder is downloaded
+where path = the directory where the ASAP folder is downloaded
 
 After the dataset gets imported run in your terminal
 
