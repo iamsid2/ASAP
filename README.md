@@ -22,7 +22,7 @@ You should also have mongodb installed in your system.
 Open terminal and then write in the terminal the following to store the ambulance details in your database
 
 ```
-mongoimport --db ambulancego --collection policeData --drop --file ./path/Pune-Hackathon/ambulance.json
+mongoimport --db ambulancego --collection policeData --drop --file /path/ASAP/ambulance.json
 ```
 where path = the directory where the ASAP folder is downloaded
 
